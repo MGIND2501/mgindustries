@@ -1,0 +1,145 @@
+/* INSIGHTS HERO */
+.insights-hero {
+  padding: 96px 64px 64px;
+  max-width: 900px;
+}
+
+.insights-hero h1 {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+.insights-hero p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* GRID – 4 COLUMNS */
+.insights-grid {
+  padding: 64px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+}
+
+/* CARD */
+.insight-card {
+  background: #f2efea;
+  border: 1px solid #e0ded8;
+  border-radius: 10px;
+  padding: 18px;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,.12);
+}
+
+.insight-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.insight-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.insight-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* PAGINATION (hidden unless needed) */
+.pagination {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.pagination a {
+  margin: 0 6px;
+  padding: 8px 14px;
+  border: 1px solid #1f3a2e;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background: #1f3a2e;
+  color: #f2efea;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .insights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= SINGLE INSIGHT PAGE ================= */
+
+.insight-post {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 96px 32px;
+}
+
+/* Title */
+.insight-post h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+/* Meta (date, category if you add later) */
+.insight-meta {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 32px;
+}
+
+/* Hero image */
+.insight-post img {
+  width: 100%;
+  max-height: 420px;        /* 🔑 THIS FIXES THE ISSUE */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+/* Content text */
+.insight-post p {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== SINGLE BLOG POST IMAGE FIX ===== */
+
+.insight-post img {
+  width: 100%;
+  max-width: 720px;       /* keeps it editorial */
+  max-height: 360px;      /* prevents full-page takeover */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 32px auto 40px; /* centers & adds breathing room */
+}

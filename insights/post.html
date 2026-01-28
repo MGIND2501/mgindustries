@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MG Industries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <nav class="nav-container">
+    <a href="../insights.html">← Back to Insights</a>
+  </nav>
+</header>
+
+<article class="post-container">
+  <h1 id="postTitle"></h1>
+  <p class="post-date" id="postDate"></p>
+  <img id="postImage" class="post-image">
+  <div id="postContent"></div>
+</article>
+
+<script>
+const SHEET_URL = "https://opensheet.elk.sh/1NzUoQGYk5DsbOZAz05KANoYo7cE9djCVBYl6QExHhNo/Sheet1";
+const slug = new URLSearchParams(window.location.search).get("slug");
+
+fetch(SHEET_URL)
+  .then(res => res.json())
+  .then(posts => {
+    const post = posts.find(p => p.slug === slug && p.published === "TRUE");
+    if (!post) return;
+
+    document.title = post.title + " | MG Industries";
+    document.getElementById("postTitle").innerText = post.title;
+    document.getElementById("postDate").innerText = post.date;
+    document.getElementById("postImage").src = post.image;
+    document.getElementById("postContent").innerHTML = post.content;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insights | MG Industries</title>
+  <meta name="description" content="Insights on steel fabrication, staircases, roofing, and structural design by MG Industries.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="insights.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="insights.html" class="active">Insights</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="MG Industries">
+    </a>
+  </nav>
+</header>
+
+<section class="insights-hero">
+  <h1>Insights</h1>
+  <p>
+    Design perspectives, fabrication knowledge, and technical notes
+    drawn from our experience in steel fabrication.
+  </p>
+</section>
+
+<section class="insights-grid" id="insightsGrid"></section>
+
+<div class="pagination" id="pagination"></div>
+
+<script>
+const SHEET_URL = "https://opensheet.elk.sh/1NzUoQGYk5DsbOZAz05KANoYo7cE9djCVBYl6QExHhNo/Sheet1";
+
+fetch(SHEET_URL)
+  .then(res => res.json())
+  .then(posts => {
+    const grid = document.getElementById("insightsGrid");
+
+    posts
+      .filter(p => p.published === "TRUE")
+      .reverse() // newest first
+      .forEach(post => {
+        const card = document.createElement("article");
+        card.className = "insight-card";
+
+        card.innerHTML = `
+          <a href="insights/post.html?slug=${post.slug}">
+            <img src="${post.image}" alt="${post.title}">
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+          </a>
+        `;
+
+        grid.appendChild(card);
+      });
+  })
+  .catch(err => console.error(err));
+</script>
+
+</body>
+</html>

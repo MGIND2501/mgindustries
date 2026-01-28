@@ -1,0 +1,332 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #f2efea;
+  color: #1f3a2e;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* SIDEBAR */
+.product-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #f2efea;
+  padding: 48px 28px;
+}
+
+.product-sidebar li {
+  margin-bottom: 22px;
+}
+
+.product-sidebar a {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin-left: 220px;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 28px 64px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-logo img {
+  height: 36px;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("aesthetic-steel-staircase.png") center / cover no-repeat;
+  overflow: hidden;
+}
+
+/* Gradient overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(242,239,234,0.92) 0%,
+    rgba(242,239,234,0.88) 55%,
+    rgba(31,58,46,0.55) 100%
+  );
+  z-index: 1;
+}
+
+/* LEFT BRAND CONTENT */
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 96px;
+  transform: translateY(-50%);
+  max-width: 520px;
+}
+
+.hero-logo {
+  height: 60px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+}
+
+/* RIGHT LOCATION BLOCK */
+.hero-location {
+  position: absolute;
+  z-index: 2;
+  right: 64px;
+  bottom: 80px;
+  max-width: 360px;
+}
+
+.hero-location h3 {
+  color: #1f2f2b;
+}
+
+.hero-location p {
+  color: #34524b;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding: 96px 64px;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+section p {
+  max-width: 720px;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ================= STAIRCASE GRID ================= */
+
+.staircase-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+}
+
+/* Card container */
+.staircase-card {
+  background: #f2efea;
+  border: 1px solid #e0ded8;
+  border-radius: 8px;
+  padding: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.staircase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.staircase-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.staircase-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.staircase-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ================= IMAGE GRID (ROOFING + GATES) ================= */
+
+.image-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.image-card {
+  background: #f2efea;
+  border: 1px solid #e0ded8;
+  border-radius: 8px;
+  padding: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.image-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* ================= ABOUT ================= */
+
+.about-text p {
+  margin-bottom: 24px;
+}
+
+.about-section {
+  padding: 0;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 520px;
+}
+
+.about-text {
+  padding: 96px 96px 96px 64px;
+}
+
+.about-accent {
+  background: #1f3a2e;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-list li {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================= REQUEST TO CONNECT ================= */
+
+#request-connect {
+  padding: 120px 80px;
+  background: #1f3a2e;
+  color: #f2efea;
+}
+
+#request-connect h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.connect-form {
+  max-width: 600px;
+  display: grid;
+  gap: 18px;
+}
+
+.connect-form label {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.connect-form input,
+.connect-form select {
+  background: #f2efea;
+  border: 1px solid #2a2a2a;
+  padding: 14px 16px;
+  color: #1f3a2e;
+  font-family: 'Space Grotesk', sans-serif;
+  border-radius: 6px;
+}
+
+.connect-form input::placeholder {
+  color: #777;
+}
+
+.connect-form button {
+  margin-top: 20px;
+  padding: 14px;
+  background: #f2efea;
+  color: #1f3a2e;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.connect-form button:hover {
+  background: #f2efea;
+}
+
+/* ================= RESPONSIVE (MOVED TO END) ================= */
+
+@media (max-width: 900px) {
+  .staircase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .staircase-grid {
+    grid-template-columns: 1fr;
+  }
+}

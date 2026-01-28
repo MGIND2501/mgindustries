@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects | MG Industries</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* ================= PROJECTS ================= */
+
+.projects-page {
+  padding: 60px 64px 100px;
+  max-width: 1400px;
+  margin: auto;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* HEADER */
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.projects-logo img {
+  height: 46px;
+}
+
+/* FILTER BUTTONS */
+.categories {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  border-radius: 22px;
+  border: 1px solid #1f3a2e;
+  background: #f2efea;
+  color: #1f3a2e;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.categories button.active {
+  background: #1f3a2e;
+  color: #f2efea;
+}
+
+/* SECTIONS */
+.projects-section {
+  margin-bottom: 80px;
+}
+
+.projects-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* MASONRY */
+.collage {
+  column-count: 3;
+  column-gap: 24px;
+}
+
+.project-image {
+  width: 100%;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  display: block;
+  break-inside: avoid;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .collage { column-count: 2; }
+}
+@media (max-width: 600px) {
+  .collage { column-count: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<main class="projects-page">
+
+<!-- HEADER -->
+<div class="projects-header">
+  <h1>Projects</h1>
+  <a href="index.html" class="projects-logo">
+    <img src="logo.png" alt="MG Industries">
+  </a>
+</div>
+
+<!-- FILTERS -->
+<div class="categories">
+  <button class="active" onclick="filterProjects('all', this)">All</button>
+  <button onclick="filterProjects('staircases', this)">Staircases</button>
+  <button onclick="filterProjects('roofing', this)">Roofing</button>
+  <button onclick="filterProjects('gates', this)">Gates</button>
+  <button onclick="filterProjects('PEB', this)">Pre-Engineered Building [PEB]</button>
+</div>
+
+<!-- COMPLETED -->
+<section class="projects-section">
+<h2>Completed Works</h2>
+<div class="collage">
+
+<!--Staircase completed-->
+
+<img src="project images/completed/staircase/c1.png"
+     alt="Helical steel staircase fabricated in Bengaluru, Karnataka"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c2.png"
+     alt="Wood-finish helical staircase installed in Kochi, Kerala"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c3.jpg"
+     alt="Victorian spiral steel staircase fabricated in Salem, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c4.png"
+     alt="Modern helical steel staircase with aesthetic detailing in Chennai, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c5.png"
+     alt="Contemporary load-bearing dog-legged steel staircase in Erode, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c6.jpg"
+     alt="Victorian-style spiral steel staircase fabricated in Salem, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c7.jpg"
+     alt="Half-turn single-beam steel staircase installed in Karur, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c8.png"
+     alt="Single stringer steel staircase fabricated in Erode, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c9.jpeg"
+     alt="Terrace-installed Victorian spiral steel staircase in Erode, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c10.jpeg"
+     alt="Custom helical wooden-finish steel staircase fabricated in Thiruvalla, Kerala"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c11.jpeg"
+     alt="White marble-finish helical steel staircase in Chennai, Tamil Nadu"
+     class="project-image staircases completed">
+
+<img src="project images/completed/staircase/c12.jpeg"
+     alt="Custom white marble-finish helical metal staircase in Chennai, Tamil Nadu"
+     class="project-image staircases completed">
+
+
+<!--Roofing completed-->
+<img src="project images/completed/roof-1.jpg"
+     class="project-image roofing completed">
+
+<!--Staircase completed-->
+<img src="project images/completed/gate-1.jpg"
+     class="project-image gates completed">
+
+</div>
+</section>
+
+<!-- EXECUTION -->
+<section class="projects-section">
+<h2>Execution Stage</h2>
+<div class="collage">
+
+<img src="project images/execution/staircase/e1.png"
+     alt="High-load industrial steel staircase under fabrication"
+     class="project-image staircases execution">
+
+<img src="project images/execution/staircase/e2.png"
+     alt="Helical steel staircase fabrication in progress"
+     class="project-image staircases execution">
+
+<img src="project images/execution/staircase/e3.png"
+     alt="Custom iron staircase fabrication during execution stage"
+     class="project-image staircases execution">
+
+<img src="project images/execution/staircase/e4.png"
+     alt="Structural steel staircase framework under fabrication"
+     class="project-image staircases execution">
+
+<img src="project images/execution/staircase/e5.png"
+     alt="Steel staircase fabrication work in progress for load-bearing structure"
+     class="project-image staircases execution">
+
+<img src="project images/execution/staircase/e6.png"
+     alt="Mild steel staircase fabrication for residential project"
+     class="project-image staircases execution">
+
+<img src="project images/execution/staircase/e7.jpg"
+     alt="Outdoor mild steel staircase custom fabrication in execution stage"
+     class="project-image staircases execution">
+
+
+</div>
+</section>
+
+</main>
+
+<script>
+function filterProjects(category, btn) {
+  const images = document.querySelectorAll('.project-image');
+  document.querySelectorAll('.categories button')
+    .forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  images.forEach(img => {
+    img.style.display =
+      category === 'all' || img.classList.contains(category)
+        ? 'block'
+        : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

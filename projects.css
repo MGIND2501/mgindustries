@@ -1,0 +1,126 @@
+/* PROJECTS PAGE ONLY */
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #f2efea;
+  color: #1f3a2e;
+}
+
+/* Page wrapper */
+.projects-page {
+  padding: 60px 40px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #f6f4ee;
+  color: #1f3b2d;
+}
+
+/* ================= HEADER ================= */
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.projects-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.projects-logo img {
+  height: 46px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* ================= FILTERS ================= */
+
+.categories {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  border-radius: 22px;
+  border: 1px solid #1f3b2d;
+  background: #f6f4ee;
+  color: #1f3b2d;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.categories button:hover,
+.categories button.active {
+  background: #1f3b2d;
+  color: #f6f4ee;
+}
+
+/* ================= SECTIONS ================= */
+
+.projects-section {
+  margin-bottom: 90px;
+}
+
+.projects-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.projects-section .note {
+  font-size: 15px;
+  opacity: 0.7;
+  margin-bottom: 28px;
+}
+
+/* ================= TRUE COLLAGE ================= */
+/* THIS IS THE IMPORTANT PART */
+
+.collage {
+  column-count: 3;
+  column-gap: 18px;
+}
+
+.collage img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 18px;
+  break-inside: avoid;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collage img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .collage {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .collage {
+    column-count: 1;
+  }
+}
+
+/* ================= FOOTER ================= */
+
+.projects-footer {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 14px;
+  color: rgba(31, 59, 45, 0.65);
+}
