@@ -190,6 +190,25 @@ ul {
   color: #34524b;
 }
 
+/* ===== ABOUT SECTION – MOBILE FIX ===== */
+@media (max-width: 900px) {
+
+  /* Make About section single column */
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /* Remove green block ONLY on mobile */
+  .about-accent {
+    display: none;
+  }
+
+  /* Let text breathe */
+  .about-text {
+    padding: 72px 24px;
+  }
+}
+
 /* ================= SECTIONS ================= */
 section {
   padding: 96px 64px;
