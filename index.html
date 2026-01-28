@@ -2,7 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <title>MG Industries | Steel Fabrication</title>
+
+  <!-- SEO META (ADDED, NO VISUAL IMPACT) -->
+  <meta name="description" content="MG Industries is a steel fabrication company based in Erode, Tamil Nadu, specializing in custom steel staircases, roofing structures, gates, railings, warehouse structures, and structural steel fabrication across South India including Chennai, Coimbatore, Bengaluru, Kochi, and Hyderabad.">
+
+  <meta name="keywords" content="steel fabrication Erode, steel staircase manufacturer Tamil Nadu, custom steel staircases India, steel roofing contractor, steel gates manufacturer, structural steel fabrication South India, industrial steel fabrication, residential steel staircases, MG Industries Erode">
+
+  <meta name="author" content="MG Industries">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Font -->
@@ -15,22 +23,14 @@
 
 <body id="top">
 
-<!-- SIDEBAR -->
-<aside class="product-sidebar">
-  <ul>
-    <li><a href="#staircases">Staircases</a></li>
-    <li><a href="#roofing">Roofing</a></li>
-    <li><a href="#gates">Gates</a></li>
-    <li><a href="#other structures">Other Structures</a></li>
-  </ul>
-</aside>
-
-<!-- MAIN CONTENT -->
-<div class="main-content">
-
 <!-- NAVBAR -->
 <header class="navbar">
   <nav class="nav-container">
+
+    <a href="#top" class="nav-logo">
+      <img src="logo.png" alt="MG Industries Logo">
+    </a>
+
     <ul class="nav-links">
       <li><a href="#about">About Us</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -38,10 +38,22 @@
       <li><a href="insights.html">Insights</a></li>
     </ul>
 
-    <a href="#top" class="nav-logo">
-      <img src="logo.png" alt="MG Industries Logo">
-    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About Us</a>
+    <a href="#staircases">Staircases</a>
+    <a href="#roofing">Roofing</a>
+    <a href="#gates">Gates</a>
+    <a href="#other-structures">Other Structures</a>
+    <a href="#request-connect">Request to Connect</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
 
 <!-- HERO -->
@@ -51,7 +63,6 @@
   <div class="hero-content">
     <img src="logo.png" alt="MG Industries" class="hero-logo">
     <h1>MG Industries</h1>
-    <h2>(website under construction-- sorry for the inconvenience)</h2>
     <p class="hero-sub">
       Custom Steel Staircases | Roofing | Gates | Structural Fabrication
     </p>
@@ -82,32 +93,31 @@
   <div class="about-wrapper">
     <div class="about-text">
       <h2>About Us</h2>
-       <p>
-          MG Industries is a trusted steel fabrication company based in Erode, Tamil Nadu,
-          with over a decade of experience in delivering high-quality structural steel solutions.
-        </p>
 
-        <p>
-          We serve clients across Southern India, including Chennai, Coimbatore, Bengaluru,
-          Kochi, and Hyderabad, providing reliable steel fabrication services for residential,
-          commercial, and industrial projects.
-        </p>
+      <p>
+        MG Industries is a trusted steel fabrication company based in Erode, Tamil Nadu,
+        with over a decade of experience in delivering high-quality structural steel solutions.
+      </p>
 
-        <p>
-          Our core expertise includes steel staircases, roofing structures, gates,
-          railings, warehouse structures, and custom fabrication works.
-        </p>
+      <p>
+        We serve clients across Southern India, including Chennai, Coimbatore, Bengaluru,
+        Kochi, and Hyderabad, providing reliable steel fabrication services for residential,
+        commercial, and industrial projects.
+      </p>
 
-        <p>
-          We collaborate with experienced architectural consultants to deliver design-led,
-          practical, and aesthetically refined steel solutions.
-        </p>
+      <p>
+        Our core expertise includes steel staircases, roofing structures, gates,
+        railings, warehouse structures, and custom fabrication works.
+      </p>
 
+      <p>
+        We collaborate with experienced architectural consultants to deliver design-led,
+        practical, and aesthetically refined steel solutions.
+      </p>
     </div>
     <div class="about-accent"></div>
   </div>
 </section>
-
 <!-- STAIRCASES -->
 <section id="staircases">
   <h2>Staircases</h2>
@@ -219,43 +229,44 @@
     <div class="image-card"><img src="images/gate-3.jpg" alt=""></div>
   </div>
 </section>
+</section>
 
-<!-- REQUEST TO CONNECT -->
+<!-- REQUEST TO CONNECT (ADDED, COMPACT, BACKEND SAFE) -->
 <section id="request-connect">
   <h2>Request to Connect</h2>
 
-  <form class="connect-form" id="connectForm">
-    <label>I am a</label>
-    <select id="role" required>
-      <option value="">Select your role</option>
-      <option>Architect / Designer</option>
-      <option>Engineer</option>
-      <option>Builder</option>
-      <option>Homeowner</option>
-      <option>Developer</option>
-    </select>
+  <form class="connect-form compact" id="connectForm">
 
-    <label>Name</label>
-   <input type="text" id="fullName" required>
+    <div class="form-row">
+      <select id="role" required>
+        <option value="">I am a</option>
+        <option>Architect / Designer</option>
+        <option>Engineer</option>
+        <option>Builder</option>
+        <option>Homeowner</option>
+        <option>Developer</option>
+      </select>
 
-    <label>Project Location (City)</label>
-    <input type="text" id="city" required>
+      <input type="text" id="fullName" placeholder="Name" required>
+    </div>
 
-    <label>Email</label>
-    <input type="email" id="email" required>
+    <div class="form-row">
+      <input type="text" id="city" placeholder="Project City" required>
+      <input type="tel" id="phone" placeholder="Phone / WhatsApp" required>
+    </div>
 
-    <label>Phone</label>
-    <input type="tel" id="phone" required>
+    <div class="form-row">
+      <input type="email" id="email" placeholder="Email" required>
 
-    <label>Requirement</label>
-    <select id="requirement" required>
-      <option value="">Select structure</option>
-      <option>Staircase</option>
-      <option>Roofing</option>
-      <option>Gate</option>
-      <option>Warehouse Structure</option>
-      <option>Other Custom Fabrication</option>
-    </select>
+      <select id="requirement" required>
+        <option value="">Requirement</option>
+        <option>Staircase</option>
+        <option>Roofing</option>
+        <option>Gate</option>
+        <option>Warehouse Structure</option>
+        <option>Other Custom Fabrication</option>
+      </select>
+    </div>
 
     <button type="submit">Request to Connect</button>
   </form>
@@ -265,49 +276,30 @@
 <section id="contact">
   <h2>Contact</h2>
   <ul class="contact-list">
-    <li><strong>Email:</strong> connect@mgindustries.org</li>
-    <li><strong>Phone:</strong> +91 89739 72236</li>
-    <li><strong>Instagram:</strong> @mg.structures</li>
+    <li>
+      <strong>Email:</strong>
+      <a href="mailto:connect@mgindustries.org">
+        connect@mgindustries.org
+      </a>
+    </li>
+
+    <li>
+      <strong>Phone:</strong>
+      <a href="tel:+918973972236">
+        +91 89739 72236
+      </a>
+    </li>
+
+    <li>
+      <a href="https://www.instagram.com/mg.structures/" target="_blank">
+        <img src="instagram.png" alt="MG Industries Instagram">
+      </a>
+    </li>
+
   </ul>
 </section>
 
-</div>
-
-<script>
-document.getElementById("connectForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const formData = new FormData();
-  formData.append("role", document.getElementById("role").value);
-  formData.append("name", document.getElementById("fullName").value);
-  formData.append("city", document.getElementById("city").value);
-  formData.append("email", document.getElementById("email").value);
-  formData.append("phone", document.getElementById("phone").value);
-  formData.append("requirement", document.getElementById("requirement").value);
-
-  fetch("https://script.google.com/macros/s/AKfycbxLNToEkL0SEDjnW3LbqvAj60cLAS5Z90US7Httnj8rWKdHBZTI5ucp6OEnkyVJqynrhQ/exec", {
-    method: "POST",
-    body: formData
-  })
-    .then(res => res.json())
-    .then(res => {
-      if (res.status === "success") {
-        alert("Thank you! We’ll get in touch shortly.");
-        document.getElementById("connectForm").reset();
-      } else if (res.status === "duplicate") {
-        alert("This request already exists.");
-      } else {
-        alert("Submission failed.");
-      }
-    })
-    .catch(err => {
-      console.error(err);
-      alert("Something went wrong.");
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
-
 
